@@ -64,7 +64,7 @@
 						</exclude>
 					</excludes>
 					<image>
-						<name>devus/${project.artifactId}</name>
+						<name>devjyot00/${project.artifactId}</name>
 					</image>
 				</configuration>
 			</plugin>
