@@ -1,0 +1,28 @@
+services:
+
+  accounts:
+    image: devjyot00/accounts
+    mem_limit: 700m # allocate a max of 700mb of storage to this service
+    ports:
+      - '8080:8080'
+    networks:
+      - devBank-network
+
+  cards:
+    image: devjyot00/cards
+    mem_limit: 700m # allocate a max of 700mb of storage to this service
+    ports:
+      - '9000:9000'
+    networks:
+      - devBank-network
+
+  loans:
+    image: devjyot00/loans
+    mem_limit: 700m # allocate a max of 700mb of storage to this service
+    ports:
+      - '8090:8090'
+    networks:
+      - devBank-network
+
+networks:
+  devBank-network: # network that the microservices will use to insteract with each other
